@@ -567,7 +567,7 @@
 ==================================== */
 @media (max-width: 1199.98px) {
     .wahana-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns:1fr;
     }
 }
 
