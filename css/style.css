@@ -1539,7 +1539,7 @@
 /* Responsive Wahana */
 @media (max-width: 991.98px) {
     .wahana-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:1fr;
     }
     .wahana-card--large {
         grid-row: span 1;
