@@ -1539,7 +1539,7 @@
 /* Responsive Wahana */
 @media (max-width: 991.98px) {
     .wahana-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
     .wahana-card--large {
         grid-row: span 1;
@@ -1547,6 +1547,12 @@
     }
     .wahana-card--cta {
         grid-column: span 2;
+    }
+    .wahana-card,
+    .wahana-card--large,
+    .wahana-card--cta{
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
     }
     .wahana-header {
         flex-direction: column;
