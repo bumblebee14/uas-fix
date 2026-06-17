@@ -1567,7 +1567,7 @@
 @media (max-width: 767.98px) {
 
     .wahana-grid{
-        grid-template-columns: 1fr;
+        grid-template-columns:1fr;
         gap: 16px;
     }
 
