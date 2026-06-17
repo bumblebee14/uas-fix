@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <title>Galeri - Purbasari Pancuran Mas</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Galeri foto wisata Purbasari Pancuran Mas Purbalingga" name="keywords">
+    <meta content="Lihat koleksi foto lengkap Purbasari Pancuran Mas — wahana, suasana, dan momen seru pengunjung." name="description">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/wahana.css" rel="stylesheet">
+    <link href="css/galeri.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <img src="img/logo-ppm.png" alt="Logo Purbasari" style="height: 45px; width: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="profil.html" class="nav-item nav-link">Profil</a>
+                    <a href="wahana.html" class="nav-item nav-link">Wahana</a>
+                    <a href="agenda.html" class="nav-item nav-link">Agenda</a>
+                    <a href="galeri.html" class="nav-item nav-link active">Galeri</a>
+                    <a href="kontak.html" class="nav-item nav-link">Kontak</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Page Hero -->
+    <div class="wahana-hero">
+        <div class="wahana-hero-overlay"></div>
+        <div class="wahana-hero-content">
+            <p class="wahana-hero-eyebrow">Purbasari Pancuran Mas</p>
+            <h1 class="wahana-hero-title">Galeri</h1>
+        </div>
+    </div>
+
+    <!-- Galeri Grid -->
+    <section class="galeri-page-section">
+        <div class="container">
+
+        <div class="galeri-intro">
+            <p class="gallery-desc">
+                Temukan keindahan, edukasi, dan keseruan yang menanti melalui berbagai momen menarik yang terekam di Purbasari Pancuran Mas.
+            </p>
+        </div>
+
+            <div class="galeri-page-grid" id="galeriGrid">
+
+                <!-- Wahana -->
+                <a href="#"
+                   data-img="img/aquarium-eksotik.jpg"
+                   data-title="Aquarium Eksotik"
+                   class="galeri-page-item">
+                    <img src="img/aquarium-eksotik.jpg" alt="Aquarium Eksotik">
+                    <div class="galeri-page-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Aquarium Eksotik</span>
+                    </div>
+                </a>
+
+                <a href="#"
+                   data-img="img/kansae.png"
+                   data-title="Taman Aquarium Kansae"
+                   class="galeri-page-item">
+                    <img src="img/kansae.png" alt="Taman Aquarium Kansae">
+                    <div class="galeri-page-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Taman Aquarium Kansae</span>
+                    </div>
+                </a>
+
+                <a href="#"
+                   data-img="img/riverworld.jpg"
+                   data-title="River World"
+                   class="galeri-page-item">
+                    <img src="img/riverworld.jpg" alt="River World">
+                    <div class="galeri-page-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>River World</span>
+                    </div>
+                </a>
+
+                <a href="#"
+                   data-img="img/akuarium-lengkung.jpg"
+                   data-title="Planet Aquarium Toyoshuka"
+                   class="galeri-page-item">
+                    <img src="img/akuarium-lengkung.jpg" alt="Planet Aquarium Toyoshuka">
+                    <div class="galeri-page-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Planet Aquarium Toyoshuka</span>
+                    </div>
+                </a>
+
+                <a href="#"
+                   data-img="img/kansai.jpg"
+                   data-title="Taman Aquarium Kansae"
+                   class="galeri-page-item">
+                    <img src="img/kansai.jpg" alt="Taman Aquarium Kansae">
+                    <div class="galeri-page-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Taman Aquarium Kansae</span>
+                    </div>
+                </a>
+
+                <a href="#"
+                   data-img="img/istana-burung.jpg"
+                   data-title="Istana Burung & Taman Lestari"
+                   class="galeri-page-item">
+                    <img src="img/istana-burung.jpg" alt="Istana Burung & Taman Lestari">
+                    <div class="galeri-page-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Istana Burung & Taman Lestari</span>
+                    </div>
+                </a>
+
+                <a href="#"
+                   data-img="img/river-world.jpg"
+                   data-title="River World"
+                   class="galeri-page-item">
+                    <img src="img/river-world.jpg" alt="River World">
+                    <div class="galeri-page-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>River World</span>
+                    </div>
+                </a>
+
+                <a href="#"
+                   data-img="img/lorong cahaya.jpeg"
+                   data-title="Lorong Cahaya"
+                   class="galeri-page-item">
+                    <img src="img/lorong cahaya.jpeg" alt="Lorong Cahaya">
+                    <div class="galeri-page-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Lorong Cahaya</span>
+                    </div>
+                </a>
+
+                <a href="#"
+                   data-img="img/rusa.jpeg"
+                   data-title="Penangkaran Rusa"
+                   class="galeri-page-item">
+                    <img src="img/rusa.jpeg" alt="Penangkaran Rusa">
+                    <div class="galeri-page-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Penangkaran Rusa</span>
+                    </div>
+                </a>
+
+                <a href="#"
+                   data-img="img/telaga fulus.jpeg"
+                   data-title="Telaga Fulus & Masjid Apung"
+                   class="galeri-page-item">
+                    <img src="img/telaga fulus.jpeg" alt="Telaga Fulus">
+                    <div class="galeri-page-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Telaga Fulus</span>
+                    </div>
+                </a>
+
+                <a href="#"
+                   data-img="img/taman burung (2).jpeg"
+                   data-title="Istana Burung & Taman Lestari"
+                   class="galeri-page-item">
+                    <img src="img/taman burung (2).jpeg" alt="Istana Burung & Taman Lestari">
+                    <div class="galeri-page-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Istana Burung & Taman Lestari</span>
+                    </div>
+                </a>
+
+                <a href="#"
+                   data-img="img/akeksotik.jpeg"
+                   data-title="Aquarium Eksotik"
+                   class="galeri-page-item">
+                    <img src="img/akeksotik.jpeg" alt="Aquarium Eksotik">
+                    <div class="galeri-page-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Aquarium Eksotik</span>
+                    </div>
+                </a>
+
+                <a href="#"
+                   data-img="img/kolam-renang.jpeg"
+                   data-title="Kolam Renang & Waterboom"
+                   class="galeri-page-item">
+                    <img src="img/kolam-renang.jpeg" alt="Kolam Renang & Waterboom">
+                    <div class="galeri-page-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Kolam Renang & Waterboom</span>
+                    </div>
+                </a>
+
+                <a href="#"
+                   data-img="img/sinema-3d.png"
+                   data-title="Sinema 3 Dimensi"
+                   class="galeri-page-item">
+                    <img src="img/sinema-3d.png" alt="Sinema 3D">
+                    <div class="galeri-page-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Sinema 3 Dimensi</span>
+                    </div>
+                </a>
+
+                <a href="#"
+                   data-img="img/taman burung.jpeg"
+                   data-title="Istana Burung & Taman Lestari"
+                   class="galeri-page-item">
+                    <img src="img/taman burung.jpeg" alt="Istana Burung & Taman Lestari">
+                    <div class="galeri-page-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Istana Burung & Taman Lestari</span>
+                    </div>
+                </a>
+
+                <a href="#"
+                   data-img="img/bebek-air.jpeg"
+                   data-title="Perahu Naga & Bebek Air"
+                   class="galeri-page-item">
+                    <img src="img/bebek-air.jpeg" alt="Perahu Naga & Bebek Air">
+                    <div class="galeri-page-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Perahu Naga & Bebek Air</span>
+                    </div>
+                </a>
+
+                <a href="#"
+                   data-img="img/penangkaran-rusa.jpg"
+                   data-title="Penangkaran Rusa"
+                   class="galeri-page-item">
+                    <img src="img/penangkaran-rusa.jpg" alt="Penangkaran Rusa">
+                    <div class="galeri-page-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Penangkaran Rusa</span>
+                    </div>
+                </a>
+
+                <a href="#"
+                   data-img="img/telaga-fulus.jpeg"
+                   data-title="Telaga Fulus & Masjid Apung"
+                   class="galeri-page-item">
+                    <img src="img/telaga-fulus.jpeg" alt="Telaga Fulus">
+                    <div class="galeri-page-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Telaga Fulus & Masjid Apung</span>
+                    </div>
+                </a>
+
+                <a href="#"
+                   data-img="img/kansae3.jpeg"
+                   data-title="Taman Aquarium Kansae"
+                   class="galeri-page-item">
+                    <img src="img/kansae3.jpeg" alt="Taman Aquarium Kansae">
+                    <div class="galeri-page-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Taman Aquarium Kansae</span>
+                    </div>
+                </a>
+
+            <!-- Empty state kalau filter tidak ada foto -->
+            <div class="galeri-empty" id="galeriEmpty" style="display:none;">
+                <i class="fas fa-images"></i>
+                <p>Foto untuk kategori ini sedang disiapkan</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="container-fluid footer-new">
+    <div class="container">
+        <div class="footer-new-grid">
+
+            <!-- Kiri: Logo + Jargon -->
+             <div class="footer-col">
+                <img src="img/logoppm.png" alt="Logo Purbasari"
+                    style="height:44px;width:auto;display:block;margin-bottom:8px;">
+                <p style="margin:0;font-weight:bold;">Taman Wisata Pendidikan</p>
+                <p style="margin:0;">Purbasari Pancuran Mas</p>
+                <p style="margin:0;">Purbalingga - Jawa Tengah</p>
+                <p class="footer-tagline">Get Learn · Get Joy · Get Fun</p>
+            </div>
+
+
+            <!-- Tengah: Sosial Media -->
+            <div class="footer-col">
+                <h5 class="footer-col-title">Sosial Media</h5>
+                <ul class="footer-links footer-links--social">
+                    <li>
+                        <a href="https://facebook.com/usernamekamu" target="_blank">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://instagram.com/usernamekamu" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://youtube.com/@channelkamu" target="_blank">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://wa.me/6282133245665" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Kanan: Kontak -->
+            <div class="footer-col">
+                <h5 class="footer-col-title">Kontak</h5>
+                <ul class="footer-links footer-links--contact">
+                    <li>
+                        <a href="https://maps.app.goo.gl/AWLLvHXVFWR4TYDMA" target="_blank">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Desa Purbayasa, Kec. Padamara, Purbalingga
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tel:+62281123456">
+                            <i class="fas fa-phone-alt"></i>
+                            (0281) 123456
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://wa.me/6282133245665" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            0821-3324-5665
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:info@purbasari.com">
+                            <i class="fas fa-envelope"></i>
+                            info@purbasari.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="footer-copy">
+    <div class="container">
+        <p>© 2026 Purbasari Pancuran Mas</p>
+        <p>Prototype by I'anatus Sabiela</p>
+    </div>
+</div>
+
+    <a href="#" class="btn btn-primary btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/galeri.js"></script>
+
+    <!-- Custom Lightbox -->
+    <div id="customLightbox" class="clb-overlay">
+        <div class="clb-topbar">
+            <span class="clb-title" id="clbTitle"></span>
+            <button class="clb-close" id="clbClose"><i class="fas fa-times"></i></button>
+        </div>
+        <button class="clb-arrow clb-prev" id="clbPrev"><i class="fas fa-chevron-left"></i></button>
+        <div class="clb-img-wrap">
+            <img src="" alt="" id="clbImg">
+        </div>
+        <button class="clb-arrow clb-next" id="clbNext"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- WA Float -->
+    <a href="https://wa.me/6282133245665" target="_blank" class="wa-float" title="Chat WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>

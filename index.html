@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <title>Purbasari Pancuran Mas - Wisata Edukasi Purbalingga</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Wisata Edukasi Purbasari Pancuran Mas Purbalingga" name="keywords">
+    <meta content="Wisata edukasi terlengkap di Purbalingga dengan berbagai wahana seru, outbound, kolam renang, spot foto instagramable" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <img src="img/logo-ppm.png" alt="Logo Purbasari" style="height: 45px; width: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="profil.html" class="nav-item nav-link">Profil</a>
+                    <a href="wahana.html" class="nav-item nav-link">Wahana</a>
+                    <a href="agenda.html" class="nav-item nav-link">Agenda</a>
+                    <a href="galeri.html" class="nav-item nav-link">Galeri</a>
+                    <a href="kontak.html" class="nav-item nav-link">Kontak</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section - Auto Slide + Klik Hero -->
+        <div class="hero-click-slider" id="heroClickSlider">
+            <div class="hero-slides">
+                <div class="hero-slide active" style="background-image: url('img/aquarium-eksotik.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('img/riverworld.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('img/akuarium-lengkung.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('img/istana-burung.jpg');"></div>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-caption">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 text-center">
+                            <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Taman Wisata Pendidikan</h4>
+                            <h1 class="display-3 text-capitalize text-white mb-4">Purbasari Pancuran Mas</h1>
+                            <p class="mb-5 fs-5 text-white">Selamat Datang di Taman Wisata Purbasari Pancuran Mas, Wisata yang tidak hanya menawarkan sarana rekreasi dan gathering, tetapi juga pendidikan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Navbar & Hero End -->
+
+<!-- Visitor Guide Start -->
+<div class="container visitor-guide-wrapper">
+    <div class="visitor-guide-box">
+
+        <div class="opening-hours">
+            <span>Opening Hours:</span>
+            <h2>Daily, 08.30 - 16.30 WIB</h2>
+        </div>
+
+        <div class="visitor-guide-menu">
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNqJqa9-iqd21fyFtMaQ8X40g9xyYmw7_GaGiMCKHvMVeOww/viewform"
+            target="_blank"
+            class="guide-item">
+                <i class="fas fa-ticket-alt"></i>
+                <h6>Rp30.000,-</h6>
+            </a>
+
+            <a href="https://maps.app.goo.gl/AWLLvHXVFWR4TYDMA"
+            target="_blank"
+            class="guide-item">
+                <i class="fas fa-route"></i>
+                <h6>Rute Lokasi</h6>
+            </a>
+
+            <div class="guide-item" id="openMap">
+                <i class="fas fa-map-marked-alt"></i>
+                <h6>Peta Destinasi</h6>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- Visitor Guide End -->
+          
+<!-- Spotlight Start -->
+<section class="spotlight-section">
+
+    <div class="spotlight-left">
+    <div class="spotlight-text">
+        <span class="spotlight-label">SPOTLIGHT</span>
+        <h2 class="spotlight-title">Wahana Unggulan</h2>
+        <p class="spotlight-desc">Temukan keunikan wahana dan pengalaman seru di
+        Purbasari Pancuran Mas, destinasi wisata edukasi
+        dan rekreasi keluarga terbesar di Purbalingga.</p>
+        <a href="wahana.html" class="spotlight-cta">
+            Lihat Semua Wahana <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+
+        <div class="spotlight-footer" id="spotlightFooter">
+            <div id="spotlightProgress" class="spotlight-progress"></div>
+            <div class="spotlight-bottom-row">
+                <div id="spotlightCounter" class="spotlight-counter">01 <span>/ 04</span></div>
+                <div class="spotlight-nav">
+                    <button id="spotlightPrev"><i class="fas fa-arrow-left"></i></button>
+                    <button id="spotlightNext"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="spotlight-right">
+        <div id="spotlightTrack" class="spotlight-track">
+            <a href="wahana.html" class="spotlight-card">
+                <img src="img/aquarium-eksotik.jpg" alt="Aquarium Eksotik">
+                <div class="spotlight-overlay">
+                    <h3>Aquarium Eksotik</h3>
+                </div>
+            </a>
+            <a href="wahana.html" class="spotlight-card">
+                <img src="img/riverworld.jpg" alt="River World">
+                <div class="spotlight-overlay">
+                    <h3>River World</h3>
+                </div>
+            </a>
+            <a href="wahana.html" class="spotlight-card">
+                <img src="img/istana-burung.jpg" alt="Istana Burung">
+                <div class="spotlight-overlay">
+                    <h3>Istana Burung</h3>
+                </div>
+            </a>
+            <a href="wahana.html" class="spotlight-card">
+                <img src="img/akuarium-lengkung.jpg" alt="Akuarium Lengkung">
+                <div class="spotlight-overlay">
+                    <h3>Akuarium Lengkung</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</section>
+<!-- Spotlight End -->
+
+<!-- Stats Start -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+ 
+                <div class="stats-item">
+                    <div class="stats-icon"><i class="fas fa-award"></i></div>
+                    <div class="stats-text">
+                        <span class="stats-value" data-target="22">0</span>
+                        <span class="stats-unit">Tahun</span>
+                        <p>Berdiri & melayani pengunjung</p>
+                    </div>
+                </div>
+ 
+                <div class="stats-item">
+                    <div class="stats-icon"><i class="fas fa-fish"></i></div>
+                    <div class="stats-text">
+                        <div class="stats-number">
+                            <span class="stats-value" data-target="200">0</span><span class="stats-plus">+</span>
+                        </div>
+                        <span class="stats-unit">Koleksi</span>
+                        <p>Ikan & satwa edukatif</p>
+                    </div>
+                </div>
+                
+                <div class="stats-item">
+                    <div class="stats-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="stats-text">
+                        <span class="stats-value chse">CHSE</span>
+                        <span class="stats-unit">Certified</span>
+                        <p>Sertifikasi resmi Kemenparekraf</p>
+                    </div>
+                </div>
+ 
+                <div class="stats-item">
+                    <div class="stats-icon"><i class="fas fa-leaf"></i></div>
+                    <div class="stats-text">
+                        <div class="stats-number">
+                            <span class="stats-value" data-target="10">0</span><span class="stats-plus">+</span>
+                        </div>
+                        <span class="stats-unit">Zona</span>
+                        <p>Edukasi & rekreasi</p>
+                    </div>
+                </div>
+ 
+            </div>
+        </div>
+    </section>
+    <!-- Stats End -->
+
+
+    
+<!-- =====================
+     GALERI SECTION Start
+===================== -->
+<section class="galeri-section">
+    <div class="container">
+        <div class="gallery-label-wrap">
+        <span class="gallery-line"></span>
+        <span class="gallery-label">OUR GALERI</span>
+        <span class="gallery-line"></span>
+    </div>
+
+        <div class="galeri-grid">
+
+            <a href="img/aquarium-eksotik.jpg" data-lightbox="galeri" data-title="Aquarium Eksotik" class="galeri-item galeri-item--tall">
+                <img src="img/aquarium-eksotik.jpg" alt="Aquarium Eksotik">
+                <div class="galeri-overlay"><span>Aquarium Eksotik</span></div>
+            </a>
+
+            <a href="img/river-world.jpg" data-lightbox="galeri" data-title="River World" class="galeri-item">
+                <img src="img/river-world.jpg" alt="River World">
+                <div class="galeri-overlay"><span>River World</span></div>
+            </a>
+
+            <a href="img/istana-burung.jpg" data-lightbox="galeri" data-title="Istana Burung" class="galeri-item">
+                <img src="img/istana-burung.jpg" alt="Istana Burung">
+                <div class="galeri-overlay"><span>Istana Burung</span></div>
+            </a>
+
+            <a href="img/akuarium-lengkung.jpg" data-lightbox="galeri" data-title="Akuarium Lengkung" class="galeri-item">
+                <img src="img/akuarium-lengkung.jpg" alt="Akuarium Lengkung">
+                <div class="galeri-overlay"><span>Aquarium Toyoshuka</span></div>
+            </a>
+
+            <a href="img/river-world.jpg" data-lightbox="galeri" data-title="Suasana Wisata" class="galeri-item">
+                <img src="img/river-world.jpg" alt="Suasana Wisata">
+                <div class="galeri-overlay"><span>Suasana Wisata</span></div>
+            </a>
+
+        </div>
+
+        <div class="galeri-footer">
+            <a href="#" class="btn-outline-dark-custom">Lihat Semua Foto</a>
+        </div>
+
+    </div>
+</section>
+<!-- GALERI SECTION End -->
+
+<!--FASILITAS SECTION START-->
+<section class="fasilitas-section">
+    <div class="container">
+
+        <div class="fasilitas-header">
+            <span class="section-label">Fasilitas</span>
+            <h2 class="section-heading">Lengkap untuk Kenyamanan<br>Seluruh Pengunjung</h2>
+            <p class="section-subheading">Semua fasilitas tersedia untuk memastikan kunjunganmu menyenangkan dari awal hingga akhir.</p>
+        </div>
+
+        <div class="fasilitas-grid">
+
+            <div class="fasilitas-item">
+                <div class="fasilitas-icon">
+                    <i class="fas fa-parking"></i>
+                </div>
+                <h5>Area Parkir Luas</h5>
+                <p>Tersedia parkir kendaraan roda dua dan roda empat yang luas dan aman.</p>
+            </div>
+
+            <div class="fasilitas-item">
+                <div class="fasilitas-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h5>Kantin & Resto</h5>
+                <p>Pilihan makanan dan minuman tersedia di dalam area wisata.</p>
+            </div>
+
+            <div class="fasilitas-item">
+                <div class="fasilitas-icon">
+                    <i class="fas fa-restroom"></i>
+                </div>
+                <h5>Toilet Bersih</h5>
+                <p>Fasilitas toilet bersih tersebar di seluruh area wisata.</p>
+            </div>
+
+            <div class="fasilitas-item">
+                <div class="fasilitas-icon">
+                    <i class="fas fa-store"></i>
+                </div>
+                <h5>Toko Souvenir</h5>
+                <p>Bawa pulang kenangan dengan souvenir khas Purbasari.</p>
+            </div>
+
+            <div class="fasilitas-item">
+                <div class="fasilitas-icon">
+                    <i class="fas fa-wheelchair"></i>
+                </div>
+                <h5>Ramah Difabel</h5>
+                <p>Area wisata dirancang ramah bagi pengunjung dengan kebutuhan khusus.</p>
+            </div>
+
+            <div class="fasilitas-item">
+                <div class="fasilitas-icon">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <h5>WiFi Area</h5>
+                <p>Koneksi WiFi tersedia di area tertentu untuk kenyamanan pengunjung.</p>
+            </div>
+
+            <div class="fasilitas-item">
+                <div class="fasilitas-icon">
+                    <i class="fas fa-first-aid"></i>
+                </div>
+                <h5>Pos Kesehatan</h5>
+                <p>Petugas kesehatan siap siaga untuk membantu selama kunjungan.</p>
+            </div>
+
+            <div class="fasilitas-item">
+                <div class="fasilitas-icon">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <h5>Spot Foto</h5>
+                <p>Berbagai spot foto instagramable tersebar di seluruh area wisata.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- FASILITAS SECTION End -->
+
+    <div class="container-fluid footer-new">
+    <div class="container">
+        <div class="footer-new-grid">
+
+            <div class="footer-col">
+                <img src="img/logoppm.png" alt="Logo Purbasari"
+                    style="height:44px;width:auto;display:block;margin-bottom:8px;">
+                <p style="margin:0;font-weight:bold;">Taman Wisata Pendidikan</p>
+                <p style="margin:0;">Purbasari Pancuran Mas</p>
+                <p style="margin:0;">Purbalingga - Jawa Tengah</p>
+                <p class="footer-tagline">Get Learn · Get Joy · Get Fun</p>
+            </div>
+
+
+            <!-- Tengah: Sosial Media -->
+            <div class="footer-col">
+                <h5 class="footer-col-title">Sosial Media</h5>
+                <ul class="footer-links footer-links--social">
+                    <li>
+                        <a href="https://facebook.com/usernamekamu" target="_blank">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://instagram.com/usernamekamu" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://youtube.com/@channelkamu" target="_blank">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://wa.me/6282133245665" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Kanan: Kontak -->
+            <div class="footer-col">
+                <h5 class="footer-col-title">Kontak</h5>
+                <ul class="footer-links footer-links--contact">
+                    <li>
+                        <a href="https://maps.app.goo.gl/AWLLvHXVFWR4TYDMA" target="_blank">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Desa Purbayasa, Kec. Padamara, Purbalingga
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tel:+62281123456">
+                            <i class="fas fa-phone-alt"></i>
+                            (0281) 123456
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://wa.me/6282133245665" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            0821-3324-5665
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:info@purbasari.com">
+                            <i class="fas fa-envelope"></i>
+                            info@purbasari.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="footer-copy">
+    <div class="container">
+        <p>© 2026 Purbasari Pancuran Mas</p>
+        <p>Prototype by I'anatus Sabiela</p>
+    </div>
+</div>
+ 
+    <a href="#" class="btn btn-primary btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+ 
+    <div id="mapModal" class="map-modal">
+        <div class="map-toolbar">
+            <a href="img/petawisata.jpg" download class="download-map"><i class="fas fa-download"></i></a>
+            <button id="closeMap" class="close-map"><i class="fas fa-times"></i></button>
+        </div>
+        <img src="img/petawisata.jpg" alt="Peta Destinasi">
+    </div>
+ 
+    <script src="js/main.js"></script>
+
+    <!-- WA Float -->
+    <a href="https://wa.me/6282133245665" target="_blank" class="wa-float" title="Chat WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>

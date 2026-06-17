@@ -1,0 +1,449 @@
+/* Hero override */
+.tentang-hero {
+    background-image: url('img/istana-burung.jpg');
+}
+
+/* ====================================
+   Profil
+==================================== */
+.tentang-profil {
+    padding: 90px 0;
+    background: #fff;
+}
+
+.tentang-profil-grid {
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.tentang-profil-img {
+    position: relative;
+    padding-bottom: 24px;
+    padding-right: 24px;
+}
+
+.tentang-profil-img img {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+    height: 500px;
+    object-fit: cover;
+}
+
+.tentang-profil-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #13357B;
+    color: #fff;
+    border-radius: 16px;
+    padding: 18px 22px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(19,53,123,.3);
+    min-width: 110px;
+}
+
+.tentang-badge-num {
+    display: block;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.tentang-badge-txt {
+    display: block;
+    font-size: 11px;
+    color: rgba(255,255,255,.7);
+    font-family: 'Roboto', sans-serif;
+    margin-top: 4px;
+}
+
+.tentang-profil-content .section-label {
+    margin-bottom: 10px;
+}
+
+.tentang-profil-content h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.2;
+    margin: 0 0 18px;
+}
+
+.tentang-profil-content h2 span {
+    color: #13357B;
+}
+
+.tentang-profil-content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.85;
+    margin-bottom: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.tentang-checklist {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tentang-check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: #444;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+.tentang-check-item i {
+    color: #13357B;
+    font-size: 14px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* ====================================
+   Visi Misi
+==================================== */
+.tentang-vismis {
+    padding: 80px 0;
+    background: #f7f6f2;
+}
+
+.tentang-vismis-header {
+    text-align: center;
+    margin-bottom: 44px;
+}
+
+.tentang-vismis-header h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #111;
+    margin: 8px 0 0;
+}
+
+.tentang-vismis-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.tentang-vismis-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 32px 26px;
+    box-shadow: 0 2px 16px rgba(0,0,0,.06);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.tentang-vismis-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,.1);
+}
+
+.tentang-vismis-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.tentang-vismis-card--visi .tentang-vismis-icon { background: #e8f0fb; }
+.tentang-vismis-card--visi .tentang-vismis-icon i { color: #13357B; font-size: 20px; }
+.tentang-vismis-card--misi .tentang-vismis-icon { background: #fff3e0; }
+.tentang-vismis-card--misi .tentang-vismis-icon i { color: #e65100; font-size: 20px; }
+.tentang-vismis-card--nilai .tentang-vismis-icon { background: #e8f5e9; }
+.tentang-vismis-card--nilai .tentang-vismis-icon i { color: #2e7d32; font-size: 20px; }
+
+.tentang-vismis-card h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.tentang-vismis-card p {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.75;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.tentang-vismis-card ul {
+    padding-left: 16px;
+    margin: 0;
+}
+
+.tentang-vismis-card ul li {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.75;
+    margin-bottom: 6px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.tentang-nilai-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 12px;
+}
+
+.tentang-nilai-list span {
+    padding: 5px 12px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 999px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ====================================
+   Stats
+==================================== */
+.tentang-stats {
+    background: #13357B;
+    padding: 55px 0;
+}
+
+.tentang-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+.tentang-stats-item {
+    padding: 16px 20px;
+    border-right: 1px solid rgba(255,255,255,.15);
+}
+
+.tentang-stats-item:last-child { border-right: none; }
+
+.tentang-stats-num {
+    display: block;
+    font-size: 44px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.tentang-stats-label {
+    display: block;
+    font-size: 13px;
+    color: rgba(255,255,255,.55);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ====================================
+   Kontak & Peta
+==================================== */
+.tentang-kontak {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.tentang-kontak-header {
+    margin-bottom: 40px;
+}
+
+.tentang-kontak-header h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #111;
+    margin: 8px 0 0;
+}
+
+.tentang-kontak-grid {
+    display: grid;
+    grid-template-columns: 42% 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.tentang-kontak-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.tentang-kontak-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.tentang-kontak-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #e8f0fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.tentang-kontak-icon i {
+    font-size: 17px;
+    color: #13357B;
+}
+
+.tentang-kontak-item h5 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 3px;
+}
+
+.tentang-kontak-item p,
+.tentang-kontak-item a {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.tentang-kontak-item a:hover { color: #13357B; }
+
+.tentang-map-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    background: #13357B;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: .3s;
+    margin-top: 8px;
+    align-self: flex-start;
+}
+
+.tentang-map-btn:hover { background: #0e264f; color: #fff; }
+
+.tentang-map-embed {
+    border-radius: 18px;
+    overflow: hidden;
+    height: 420px;
+    box-shadow: 0 4px 24px rgba(0,0,0,.1);
+}
+
+.tentang-map-embed iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+}
+
+/* ====================================
+   Responsive
+==================================== */
+@media (max-width: 991.98px) {
+    .tentang-profil-grid,
+    .tentang-kontak-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .tentang-profil-img {
+        padding-bottom: 20px;
+        padding-right: 20px;
+    }
+
+    .tentang-profil-img img { height: 320px; }
+
+    .tentang-vismis-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tentang-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tentang-stats-item {
+        border-bottom: 1px solid rgba(255,255,255,.15);
+    }
+
+    .tentang-stats-item:nth-child(2n) { border-right: none; }
+    .tentang-stats-item:nth-last-child(-n+2) { border-bottom: none; }
+
+    .tentang-profil-content h2 { font-size: 28px; }
+    .tentang-map-embed { height: 300px; }
+}
+
+@media (max-width: 575.98px) {
+    .tentang-stats-num { font-size: 34px; }
+    .tentang-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* WA Floating Button */
+.wa-float {
+    position: fixed;
+    left: 24px;
+    bottom: 30px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #25D366;
+    color: #fff;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(37,211,102,.4);
+    text-decoration: none;
+    z-index: 998;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.wa-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 22px rgba(37,211,102,.55);
+    color: #fff;
+}
+
+/* ====================================
+   HERO MOBILE FIX
+==================================== */
+
+@media (max-width: 991.98px){
+
+    /* Home */
+    .hero-click-slider{
+        min-height: 70vh;
+    }
+
+    .hero-click-slider .hero-caption{
+        height: 70vh;
+    }
+
+    .hero-click-slider .hero-slide{
+        background-position: center center;
+    }
+
+    /* Semua Hero Halaman */
+    .wahana-hero,
+    .about-hero{
+        height: 40vh;
+        min-height: 250px;
+
+        background-position: center center;
+    }
+
+}
