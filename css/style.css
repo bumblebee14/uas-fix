@@ -1007,7 +1007,11 @@
 
 /* MOBILE */
 
-@media (min-width: 992px) {
+/* =========================
+   SPOTLIGHT - DESKTOP (LAPTOP & HP DESKTOP MODE)
+   Teks + slider di KIRI, gambar di KANAN
+========================= */
+@media (min-width: 768px) {
     .spotlight-section {
         display: flex !important;
         flex-direction: row !important;
@@ -1061,18 +1065,11 @@
 }
 
 /* ==========================================================
-   HP DESKTOP MODE (768px - 991px)
-   SAMA KAYA DESKTOP ASLI
+   TABLET / HP DESKTOP MODE (768px - 991px)
+   Ukuran lebih kecil tapi layout SAMA
 ========================================================== */
 @media (min-width: 768px) and (max-width: 991.98px) {
-    .spotlight-section {
-        display: flex !important;
-        flex-direction: row !important;
-        min-height: 600px !important;
-    }
-
     .spotlight-left {
-        width: 50% !important;
         padding: 50px 40px 40px !important;
     }
 
@@ -1080,16 +1077,8 @@
         margin-top: 40px !important;
     }
 
-    .spotlight-right {
-        width: 50% !important;
-        padding: 0 20px 0 0 !important;
-    }
-
     .spotlight-footer {
         margin-top: 40px !important;
-        background: transparent !important;
-        padding: 0 !important;
-        width: auto !important;
     }
 
     .spotlight-card {
@@ -1105,8 +1094,11 @@
     .spotlight-track {
         gap: 12px !important;
     }
-}
 
+    .spotlight-section {
+        min-height: 600px !important;
+    }
+}
 /*** Stats ***/
 .stats-section { 
     background:#13357B; 
