@@ -1046,44 +1046,51 @@
 }
 
 /* ==========================================================
-   DESKTOP MODE (termasuk saat HP di Desktop Mode)
-   Teks + slider di kiri, gambar di kanan
+   HP DESKTOP MODE (di HP tapi pilih Desktop Mode)
+   Harusnya SAMA KAYA Desktop Asli di atas
 ========================================================== */
-@media (min-width: 992px) {
+/* INI YANG DITAMBAHIN BIAR HP MODE DESKTOP NGIKUTIN DESKTOP */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* SAMA PERSIS KAYA DESKTOP TAPI UKURAN LEBIH KECIL */
     .spotlight-section {
         flex-direction: row !important;
     }
 
     .spotlight-left {
         width: 50% !important;
-        padding: 90px 90px 70px !important;
+        padding: 50px 40px 40px !important;
         order: 1 !important;
     }
 
     .spotlight-right {
         width: 50% !important;
-        padding: 0 !important;
+        padding: 0 20px 0 0 !important;
         order: 2 !important;
     }
 
     .spotlight-text {
-        margin-top: 90px !important;
+        margin-top: 40px !important;
     }
 
     .spotlight-footer {
-        margin-top: 90px !important;
+        margin-top: 40px !important;
         background: transparent !important;
         padding: 0 !important;
         width: auto !important;
     }
 
     .spotlight-card {
-        flex: 0 0 500px !important;
-        height: 470px !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        height: 350px !important;
     }
 
     .spotlight-track {
-        gap: 20px !important;
+        gap: 12px !important;
+    }
+
+    .spotlight-title {
+        font-size: 38px !important;
     }
 }
 
