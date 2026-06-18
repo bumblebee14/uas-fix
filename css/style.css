@@ -813,6 +813,7 @@
 .spotlight-section{
     display:flex;
     min-height:700px;
+    flex-wrap:nowrap;
 
     background:#f7f6f2;
 
@@ -950,6 +951,7 @@
     display:flex;
     align-items:center;
     position: relative;
+    justify-conten:flex-start;
 }
 
 .spotlight-track{
@@ -965,9 +967,13 @@
 /* CARD */
 
 .spotlight-card{
-    flex:0 0 500px;
+    flex:0 0 85%;
 
     height:470px;
+
+    width:85%;
+
+    max-width:500px
 
     border-radius:22px;
 
