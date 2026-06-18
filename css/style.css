@@ -1007,7 +1007,7 @@
 
 /* MOBILE */
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
     .spotlight-section {
         display: flex;
         flex-direction: column;
@@ -1881,7 +1881,7 @@
 /* ====================================
    SPOTLIGHT MOBILE FIX
 ==================================== */
-@media (max-width: 767.98px){
+@media (max-width: 991.98px){
 
     .spotlight-right{
         padding: 0 20px;
