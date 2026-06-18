@@ -3815,7 +3815,7 @@
 /* ====================================
    SPOTLIGHT MOBILE FIX
 ==================================== */
-@media (max-width: 767.98px){
+/* @media (max-width: 767.98px){
 
     .spotlight-right{
         padding: 0 20px;
@@ -3838,7 +3838,7 @@
     .spotlight-overlay h3{
         font-size: 18px;
     }
-}
+} */
 
 /* ====================================
    MOBILE GRID FIX
