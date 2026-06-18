@@ -1045,29 +1045,6 @@
     }
 }
 
-/* ====================================
-   SPOTLIGHT TABLET / CHROME DESKTOP-MODE FIX (768px - 991.98px)
-==================================== */
-@media (min-width: 768px) and (max-width: 991.98px) {
-
-    .spotlight-left{
-        padding: 60px 40px 30px;
-    }
-
-    .spotlight-text{
-        margin-top: 0;
-    }
-
-    .spotlight-footer{
-        margin-top: 30px;
-    }
-
-    .spotlight-title{
-        font-size: 36px;
-    }
-
-}
-
 /*** Stats ***/
 .stats-section { 
     background:#13357B; 
