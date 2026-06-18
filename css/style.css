@@ -1007,43 +1007,34 @@
 
 /* MOBILE */
 
-@media (max-width: 768px) {
-    .spotlight-section {
-        display: flex;
-        flex-direction: column;
+@media (max-width:767.98px){
+
+    .spotlight-section{
+        flex-direction:column;
     }
 
-    .spotlight-left {
-        width: 100%;
-        padding: 40px 24px 0;
+    .spotlight-left,
+    .spotlight-right{
+        width:100% !important;
     }
 
-    .spotlight-text {
-        margin-top: 80px; /* dikurangin dari 100px */
+    .spotlight-right{
+        margin-top:20px;
+        padding:0 24px;
     }
 
-    .spotlight-right {
-        width: 100%;
-        padding-left: 24px;
-        margin-top: 24px;
+    .spotlight-footer{
+        margin-top:30px;
     }
 
-    .spotlight-footer {
-        background: #f7f6f2;
-        padding: 20px 24px 36px;
-        width: 100%;
-        margin: 0;
-    }
-
-    .spotlight-card {
-        flex: 0 0 500px;
-        height: 400px;
-    }
-
-    .spotlight-title {
-        font-size: 42px;
+    .spotlight-card{
+        flex:0 0 100%;
+        width:100%;
+        max-width:none;
+        height:280px;
     }
 }
+
 /*** Stats ***/
 .stats-section { 
     background:#13357B; 
