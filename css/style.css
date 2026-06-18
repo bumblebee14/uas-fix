@@ -1956,23 +1956,17 @@
 
     .spotlight-right{
         width:100%;
-        margin-top:0;
-        padding:0;
+        overflow:hidden;
+        padding-left:40px; /* kasih ruang */
     }
 
-    .spotlight-text{
-        margin-top:0 !important;
-    }
-
-    .spotlight-footer{
-        padding:0 !important;
-        margin-top:50px !important;
-        background:none !important;
+    .spotlight-track{
+        gap:20px;
+        padding-right:120px
     }
 
     .spotlight-card{
-        flex:0 0 420px !important;
-        height:380px !important;
+        flex:0 0 78% !important; /* INI KUNCINYA */
+        height:420px !important;
     }
 }
-
