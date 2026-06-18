@@ -1045,6 +1045,48 @@
     }
 }
 
+/* ==========================================================
+   DESKTOP MODE (termasuk saat HP di Desktop Mode)
+   Teks + slider di kiri, gambar di kanan
+========================================================== */
+@media (min-width: 992px) {
+    .spotlight-section {
+        flex-direction: row !important;
+    }
+
+    .spotlight-left {
+        width: 50% !important;
+        padding: 90px 90px 70px !important;
+        order: 1 !important;
+    }
+
+    .spotlight-right {
+        width: 50% !important;
+        padding: 0 !important;
+        order: 2 !important;
+    }
+
+    .spotlight-text {
+        margin-top: 90px !important;
+    }
+
+    .spotlight-footer {
+        margin-top: 90px !important;
+        background: transparent !important;
+        padding: 0 !important;
+        width: auto !important;
+    }
+
+    .spotlight-card {
+        flex: 0 0 500px !important;
+        height: 470px !important;
+    }
+
+    .spotlight-track {
+        gap: 20px !important;
+    }
+}
+
 /*** Stats ***/
 .stats-section { 
     background:#13357B; 
