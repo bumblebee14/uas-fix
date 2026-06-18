@@ -965,7 +965,9 @@
 /* CARD */
 
 .spotlight-card{
-    flex:0 0 500px;
+    flex:1 0 auto;
+    width:500px;
+    max-width:100%;
 
     height:470px;
 
