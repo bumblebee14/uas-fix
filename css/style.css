@@ -2944,41 +2944,38 @@
 
 /* MOBILE */
 
-@media (max-width: 767.98px) {
-    .spotlight-section {
-        display: flex;
-        flex-direction: column;
+@media (max-width: 767.98px){
+
+    .spotlight-section{
+        flex-direction: row;
     }
 
-    .spotlight-left {
-        width: 100%;
-        padding: 40px 24px 0;
+    .spotlight-left{
+        width:50%;
+        padding:50px 30px;
     }
 
-    .spotlight-text {
-        margin-top: 80px; /* dikurangin dari 100px */
+    .spotlight-right{
+        width:50%;
+        padding:0;
     }
 
-    .spotlight-right {
-        width: 100%;
-        padding-left: 24px;
-        margin-top: 24px;
+    .spotlight-text{
+        margin-top:30px;
     }
 
-    .spotlight-footer {
-        background: #f7f6f2;
-        padding: 20px 24px 36px;
-        width: 100%;
-        margin: 0;
+    .spotlight-title{
+        font-size:32px;
     }
 
-    .spotlight-card {
-        flex: 0 0 500px;
-        height: 400px;
+    .spotlight-footer{
+        margin-top:40px;
     }
 
-    .spotlight-title {
-        font-size: 42px;
+    .spotlight-card{
+        flex:0 0 85%;
+        height:320px;
+        max-width:none;
     }
 }
 
