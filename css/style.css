@@ -1007,41 +1007,103 @@
 
 /* MOBILE */
 
-@media (max-width: 1200px) {
+@media (min-width: 992px) {
     .spotlight-section {
-        display: flex;
-        flex-direction: column;
+        display: flex !important;
+        flex-direction: row !important;
+        min-height: 700px;
+        background: #f7f6f2;
+        margin-top: -90px;
+        position: relative;
+        z-index: 1;
     }
 
     .spotlight-left {
-        width: 100%;
-        padding: 40px 24px 0;
+        width: 50% !important;
+        padding: 90px 90px 70px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
     }
 
     .spotlight-text {
-        margin-top: 80px; /* dikurangin dari 100px */
+        margin-top: 90px !important;
     }
 
     .spotlight-right {
-        width: 100%;
-        padding-left: 24px;
-        margin-top: 24px;
+        width: 50% !important;
+        overflow: hidden !important;
+        display: flex !important;
+        align-items: center !important;
+        position: relative !important;
+        padding: 0 !important;
     }
 
     .spotlight-footer {
-        background: #f7f6f2;
-        padding: 20px 24px 36px;
-        width: 100%;
-        margin: 0;
+        margin-top: 90px !important;
+        background: transparent !important;
+        padding: 0 !important;
+        width: auto !important;
     }
 
     .spotlight-card {
-        flex: 0 0 500px;
-        height: 400px;
+        flex: 0 0 500px !important;
+        height: 470px !important;
+    }
+
+    .spotlight-track {
+        gap: 20px !important;
     }
 
     .spotlight-title {
-        font-size: 42px;
+        font-size: 50px !important;
+    }
+}
+
+/* ==========================================================
+   HP DESKTOP MODE (768px - 991px)
+   SAMA KAYA DESKTOP ASLI
+========================================================== */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .spotlight-section {
+        display: flex !important;
+        flex-direction: row !important;
+        min-height: 600px !important;
+    }
+
+    .spotlight-left {
+        width: 50% !important;
+        padding: 50px 40px 40px !important;
+    }
+
+    .spotlight-text {
+        margin-top: 40px !important;
+    }
+
+    .spotlight-right {
+        width: 50% !important;
+        padding: 0 20px 0 0 !important;
+    }
+
+    .spotlight-footer {
+        margin-top: 40px !important;
+        background: transparent !important;
+        padding: 0 !important;
+        width: auto !important;
+    }
+
+    .spotlight-card {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        height: 320px !important;
+    }
+
+    .spotlight-title {
+        font-size: 36px !important;
+    }
+
+    .spotlight-track {
+        gap: 12px !important;
     }
 }
 
