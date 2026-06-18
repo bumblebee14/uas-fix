@@ -1937,22 +1937,3 @@
     }
 }
 
-/* HP Desktop Mode */
-@media (min-width:768px){
-
-    .spotlight-section{
-        display:flex !important;
-        flex-direction:row !important;
-        flex-wrap:nowrap !important;
-    }
-
-    .spotlight-left{
-        flex:0 0 50%;
-        width:50%;
-    }
-
-    .spotlight-right{
-        flex:0 0 50%;
-        width:50%;
-    }
-}
