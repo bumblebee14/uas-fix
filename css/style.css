@@ -925,7 +925,7 @@
     border-radius:50%;
     border:1px solid #13357B;
     background:white;
-    color: 13357B;
+    color: #13357B;
 
     display:flex;
     align-items:center;
@@ -1941,25 +1941,23 @@
    SPOTLIGHT HP DESKTOP MODE
 ========================================= */
 
-@media (max-width:991.98px){
+@media (min-width:992px){
 
     .spotlight-section{
-        display:grid !important;
-        grid-template-columns:42% 58% !important;
-        min-height:auto;
+        display:grid;
+        grid-template-columns:45% 55%;
         align-items:center;
     }
 
     .spotlight-left{
-        width:100% !important;
-        padding:60px 35px !important;
+        width:100%;
+        padding:80px 60px;
     }
 
     .spotlight-right{
-        width:100% !important;
-        padding:0 !important;
-        margin-top:0 !important;
-        overflow:hidden;
+        width:100%;
+        margin-top:0;
+        padding:0;
     }
 
     .spotlight-text{
@@ -1978,25 +1976,3 @@
     }
 }
 
-/* =========================================
-   MOBILE MODE SPOTLIGHT
-   (yang sekarang udah bagus dipertahankan)
-========================================= */
-
-@media (max-width:768px){
-
-    .spotlight-section{
-        display:flex !important;
-        flex-direction:column !important;
-    }
-
-    .spotlight-left,
-    .spotlight-right{
-        width:100% !important;
-    }
-
-    .spotlight-card{
-        flex:0 0 80vw !important;
-        height:260px !important;
-    }
-}
