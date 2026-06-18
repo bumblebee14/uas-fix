@@ -1007,7 +1007,7 @@
 
 /* MOBILE */
 
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
     .spotlight-section {
         display: flex;
         flex-direction: column;
@@ -1545,7 +1545,7 @@
     }
 
 }
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
     .wahana-grid {
         grid-template-columns:1fr;
     }
