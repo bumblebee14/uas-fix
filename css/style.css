@@ -1005,35 +1005,245 @@
     font-weight:700;
 }
 
+/* =========================
+   SPOTLIGHT
+========================= */
+
+.spotlight-section{
+    display:flex;
+    min-height:700px;
+
+    background:#f7f6f2;
+
+    margin-top:-90px;
+
+    position:relative;
+    z-index:1;
+}
+
+/* KIRI */
+
+.spotlight-left{
+    width:50%;
+    padding:90px 90px 70px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+}
+
+.spotlight-text{
+    margin-top:90px;
+}
+
+.spotlight-label{
+    font-size:13px;
+    letter-spacing:3px;
+    color:#13357B;
+    font-weight:700;
+}
+
+.spotlight-title{
+    font-size:50px;
+    font-weight:800;
+    line-height:1.05;
+    margin:17px 0;
+}
+
+.spotlight-desc{
+    margin-top: 25px;
+    max-width:430px;
+    line-height:1.9;
+    color:#666;
+}
+
+.spotlight-cta { 
+    display:inline-flex; 
+    align-items:center; 
+    gap:8px; 
+    font-size:13px; 
+    font-weight:700; 
+    color:#13357B; 
+    text-decoration:none; 
+    letter-spacing:.5px; 
+    border-bottom:2px solid #13357B; 
+    padding-bottom:2px; 
+    transition:.3s; 
+}
+
+.spotlight-footer{
+    margin-top:90px;
+}
+
+/* Counter kiri - tombol kanan */
+.spotlight-bottom-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.spotlight-counter{
+    font-size:34px;
+    font-weight:800;
+    color:#13357B;
+    line-height: 1;
+}
+
+.spotlight-counter span{
+    font-size:16px;
+    font-weight: 500;
+    color:#999;
+}
+
+.spotlight-progress{
+    display:flex;
+    gap:8px;
+    width: 100%;
+    margin-bottom:20px;
+}
+
+.progress-item{
+    flex:1;
+    height:4px;
+    background:#ddd;
+    border-radius:20px;
+}
+
+.progress-item.active{
+    background:#13357B;
+}
+
+.spotlight-nav{
+    display:flex;
+    gap:8px;
+}
+
+.spotlight-nav button{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    border:1px solid #13357B;
+    background:white;
+    color: 13357B;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:12px;
+
+    transition:.3s;
+}
+
+.spotlight-nav button:hover{
+    background:#13357B;
+    color:white;
+}
+
+/* KANAN */
+
+.spotlight-right{
+    width:50%;
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+    position: relative;
+}
+
+.spotlight-track{
+    display:flex;
+    gap:20px;
+
+    will-change: transform;
+
+    transform: translate3d(0,0,0);
+    backface-visibility: hidden;
+}
+
+/* CARD */
+
+.spotlight-card{
+    flex:0 0 500px;
+
+    height:470px;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    position:relative;
+}
+
+.spotlight-card img{
+    width:100%;
+    height:100%;
+    object-position: center;
+    object-fit:cover;
+}
+
+.spotlight-overlay{
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:30px;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.9),
+        transparent
+    );
+}
+
+.spotlight-overlay h3{
+    color:white;
+    font-size:24px;
+    font-weight:700;
+}
+
 /* MOBILE */
 
-@media (max-width:767.98px){
-
-    .spotlight-section{
-        flex-direction:column;
+@media (max-width: 992px) {
+    .spotlight-section {
+        display: flex;
+        flex-direction: column;
     }
 
-    .spotlight-left,
-    .spotlight-right{
-        width:100% !important;
+    .spotlight-left {
+        width: 100%;
+        padding: 40px 24px 0;
     }
 
-    .spotlight-right{
-        margin-top:20px;
-        padding:0 24px;
+    .spotlight-text {
+        margin-top: 80px; /* dikurangin dari 100px */
     }
 
-    .spotlight-footer{
-        margin-top:30px;
+    .spotlight-right {
+        width: 100%;
+        padding-left: 24px;
+        margin-top: 24px;
     }
 
-    .spotlight-card{
-        flex:0 0 100%;
-        width:100%;
-        max-width:none;
-        height:280px;
+    .spotlight-footer {
+        background: #f7f6f2;
+        padding: 20px 24px 36px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .spotlight-card {
+        flex: 0 0 500px;
+        height: 400px;
+    }
+
+    .spotlight-title {
+        font-size: 42px;
     }
 }
+
 
 /*** Stats ***/
 .stats-section { 
@@ -1927,43 +2137,3 @@
     }
 }
 
-/* =========================================
-   SPOTLIGHT HP DESKTOP MODE
-========================================= */
-
-@media (max-width:991.98px){
-
-    .spotlight-section{
-        display:grid !important;
-        grid-template-columns:42% 58% !important;
-        min-height:auto;
-        align-items:center;
-    }
-
-    .spotlight-left{
-        width:100% !important;
-        padding:60px 35px !important;
-    }
-
-    .spotlight-right{
-        width:100% !important;
-        padding:0 !important;
-        margin-top:0 !important;
-        overflow:hidden;
-    }
-
-    .spotlight-text{
-        margin-top:0 !important;
-    }
-
-    .spotlight-footer{
-        padding:0 !important;
-        margin-top:50px !important;
-        background:none !important;
-    }
-
-    .spotlight-card{
-        flex:0 0 420px !important;
-        height:380px !important;
-    }
-}
