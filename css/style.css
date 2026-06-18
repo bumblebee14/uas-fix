@@ -951,7 +951,7 @@
     display:flex;
     align-items:center;
     position: relative;
-    justify-conten:flex-start;
+    justify-content:flex-start;
 }
 
 .spotlight-track{
@@ -968,18 +968,10 @@
 
 .spotlight-card{
     flex:0 0 85%;
-
     height:470px;
-
     width:85%;
-
     max-width:500px
-
     border-radius:22px;
-
-    overflow:hidden;
-
-    position:relative;
 }
 
 .spotlight-card img{
@@ -1887,7 +1879,7 @@
 /* ====================================
    SPOTLIGHT MOBILE FIX
 ==================================== */
-@media (max-width: 991.98px){
+@media (max-width: 767.98px){
 
     .spotlight-right{
         padding: 0 20px;
