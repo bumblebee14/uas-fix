@@ -925,7 +925,7 @@
     border-radius:50%;
     border:1px solid #13357B;
     background:white;
-    color: #13357B;
+    color: 13357B;
 
     display:flex;
     align-items:center;
@@ -1007,41 +1007,40 @@
 
 /* MOBILE */
 
+/* MOBILE */
+
 @media (max-width: 992px) {
-    .spotlight-section {
-        display: flex;
-        flex-direction: column;
+
+    .spotlight-section{
+        flex-direction:row;
+        min-height:auto;
     }
 
-    .spotlight-left {
-        width: 100%;
-        padding: 40px 24px 0;
+    .spotlight-left{
+        width:45%;
+        padding:40px 20px;
     }
 
-    .spotlight-text {
-        margin-top: 80px; /* dikurangin dari 100px */
+    .spotlight-right{
+        width:55%;
+        padding-left:20px;
+        margin-top:0;
+        overflow:hidden;
     }
 
-    .spotlight-right {
-        width: 100%;
-        padding-left: 24px;
-        margin-top: 24px;
+    .spotlight-footer{
+        margin-top:40px;
+        padding:0;
+        background:transparent;
     }
 
-    .spotlight-footer {
-        background: #f7f6f2;
-        padding: 20px 24px 36px;
-        width: 100%;
-        margin: 0;
+    .spotlight-card{
+        flex:0 0 75%;
+        height:300px;
     }
 
-    .spotlight-card {
-        flex: 0 0 500px;
-        height: 400px;
-    }
-
-    .spotlight-title {
-        font-size: 42px;
+    .spotlight-title{
+        font-size:30px;
     }
 }
 
@@ -1879,34 +1878,6 @@
 }
 
 /* ====================================
-   SPOTLIGHT MOBILE FIX
-==================================== */
-@media (max-width: 991.98px){
-
-    .spotlight-right{
-        padding: 0 20px;
-    }
-
-    .spotlight-track{
-        gap: 12px;
-    }
-
-    .spotlight-card{
-        flex: 0 0 100%;
-        max-width: 100%;
-        height: 280px;
-    }
-
-    .spotlight-overlay{
-        padding: 20px;
-    }
-
-    .spotlight-overlay h3{
-        font-size: 18px;
-    }
-}
-
-/* ====================================
    MOBILE GRID FIX
 ==================================== */
 @media (max-width: 767.98px){
@@ -1934,39 +1905,5 @@
 
     .fasilitas-item p{
         font-size:12px;
-    }
-}
-
-/* =========================================
-   SPOTLIGHT HP DESKTOP MODE
-========================================= */
-
-@media (min-width:992px){
-
-    .spotlight-section{
-        display:grid;
-        grid-template-columns:45% 55%;
-        align-items:center;
-    }
-
-    .spotlight-left{
-        width:100%;
-        padding:80px 60px;
-    }
-
-    .spotlight-right{
-        width:100%;
-        overflow:hidden;
-        padding-left:40px; /* kasih ruang */
-    }
-
-    .spotlight-track{
-        gap:20px;
-        padding-right:120px
-    }
-
-    .spotlight-card{
-        flex:0 0 78% !important; /* INI KUNCINYA */
-        height:420px !important;
     }
 }
