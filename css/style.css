@@ -1010,7 +1010,7 @@
 @media (max-width: 992x) {
     .spotlight-section {
         display: flex;
-        flex-direction: ROW;
+        flex-direction:row;
     }
 
     .spotlight-left {
