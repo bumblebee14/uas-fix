@@ -1618,130 +1618,238 @@
    SPOTLIGHT 
 ========================= */
 
+/* TAMPILAN LAPTOP (ORIGINAL - JANGAN DIUBAH) */
 .spotlight-section {
     display: flex;
-    flex-direction: row; /* Desktop default: Samping-sampingan */
+    min-height: 700px;
     background: #f7f6f2;
     margin-top: -90px;
     position: relative;
     z-index: 1;
-    width: 100%;
-    overflow: hidden;
 }
 
-/* SISI KIRI: Teks & Navigasi Slider */
 .spotlight-left {
     width: 50%;
-    padding: 100px 40px 60px 80px;
+    padding: 90px 40px 70px 80px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Menjaga teks di atas, navigasi di bawah */
-    box-sizing: border-box;
+    justify-content: flex-start;
 }
 
 .spotlight-text {
-    margin-top: 50px;
+    margin-top: 90px;
 }
 
-.spotlight-label { font-size: 13px; letter-spacing: 3px; color: #13357B; font-weight: 700; }
-.spotlight-title { font-size: 42px; font-weight: 800; line-height: 1.1; margin: 15px 0; color: #111; }
-.spotlight-desc { margin-top: 20px; line-height: 1.8; color: #666; }
-.spotlight-cta { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: #13357B; text-decoration: none; border-bottom: 2px solid #13357B; padding-bottom: 2px; margin-top: 15px; }
+.spotlight-label {
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #13357B;
+    font-weight: 700;
+}
 
-/* NAVIGASI SLIDER (01/04 + Panah) */
+.spotlight-title {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.05;
+    margin: 17px 0;
+}
+
+.spotlight-desc {
+    margin-top: 25px;
+    max-width: 430px;
+    line-height: 1.9;
+    color: #666;
+}
+
+.spotlight-cta { 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 8px; 
+    font-size: 13px; 
+    font-weight: 700; 
+    color: #13357B; 
+    text-decoration: none; 
+    letter-spacing: .5px; 
+    border-bottom: 2px solid #13357B; 
+    padding-bottom: 2px; 
+    transition: .3s; 
+}
+
 .spotlight-footer {
-    width: 100%;
-    padding-top: 40px;
+    margin-top: 90px;
 }
 
-.spotlight-progress { display: flex; gap: 8px; width: 100%; margin-bottom: 15px; }
-.progress-item { flex: 1; height: 4px; background: #ddd; border-radius: 10px; }
-.progress-item.active { background: #13357B; }
-.spotlight-bottom-row { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-.spotlight-counter { font-size: 32px; font-weight: 800; color: #13357B; }
-.spotlight-counter span { font-size: 16px; color: #999; }
-.spotlight-nav { display: flex; gap: 10px; }
-.spotlight-nav button { width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid #13357B; background: white; color: #13357B; display: flex; align-items: center; justify-content: center; transition: .3s; }
+.spotlight-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-/* SISI KANAN: Gambar Slider */
+.spotlight-counter {
+    font-size: 34px;
+    font-weight: 800;
+    color: #13357B;
+    line-height: 1;
+}
+
+.spotlight-counter span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #999;
+}
+
+.spotlight-progress {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.progress-item {
+    flex: 1;
+    height: 4px;
+    background: #ddd;
+    border-radius: 20px;
+}
+
+.progress-item.active {
+    background: #13357B;
+}
+
+.spotlight-nav {
+    display: flex;
+    gap: 8px;
+}
+
+.spotlight-nav button {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #13357B;
+    background: white;
+    color: #13357B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    transition: .3s;
+}
+
+.spotlight-nav button:hover {
+    background: #13357B;
+    color: white;
+}
+
 .spotlight-right {
     width: 50%;
     overflow: hidden;
     display: flex;
     align-items: center;
-    padding: 60px 0;
-    box-sizing: border-box;
+    position: relative;
 }
 
 .spotlight-track {
     display: flex;
     gap: 20px;
-    width: 100%;
 }
 
-/* LAPTOP DEFAULT: Ada 'Ngintip' (lebar 500px) */
 .spotlight-card {
-    flex: 0 0 500px;
+    flex: 0 0 500px; /* Membuat gambar ngintip di laptop */
     height: 470px;
     border-radius: 22px;
     overflow: hidden;
     position: relative;
 }
 
-.spotlight-card img { width: 100%; height: 100%; object-fit: cover; }
-
-/* 
-   ============================================================
-   1. FIX HP DESKTOP MODE (Layar simulasi ~980px)
-   TETAP Side-by-Side, tapi TIDAK ADA NGINTIP
-   ============================================================
-*/
-@media (min-width: 768px) and (max-width: 1100px) {
-    .spotlight-left { padding-left: 40px; }
-    .spotlight-card {
-        flex: 0 0 100%; /* Gambar ambil lebar penuh container kanan */
-    }
-    .spotlight-right { padding-right: 40px; }
+.spotlight-card img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
 }
 
-/* 
-   ============================================================
-   2. FIX HP MOBILE MODE (< 768px)
-   URUTAN JANGAN BERUBAH: TEKS -> GAMBAR -> NAVIGASI
-   ============================================================
-*/
-@media (max-width: 767px) {
-    .spotlight-section { flex-direction: column; margin-top: 0; }
-    
-    /* Gunakan display contents agar elemen dalam kolom kiri bisa di-order ulang */
-    .spotlight-left { display: contents; }
+.spotlight-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0,0,0,.9), transparent);
+}
 
-    .spotlight-text { 
-        order: 1; /* Teks paling atas */
-        width: 100%; 
-        padding: 60px 24px 0; 
+.spotlight-overlay h3 {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+/* ============================================================
+   FIX UNTUK HP (DESKTOP MODE & MOBILE MODE)
+   ============================================================ */
+
+@media (max-width: 991.98px) {
+    .spotlight-section {
+        flex-direction: column;
+        margin-top: 0;
     }
 
-    .spotlight-right { 
-        order: 2; /* Gambar di tengah */
-        width: 100%; 
-        padding: 24px 24px 0; 
+    /* Menggunakan display: contents agar elemen di dalam bisa di-order ulang */
+    .spotlight-left {
+        display: contents; 
     }
 
-    .spotlight-card { 
+    /* 1. TEKS (ORDER 1) */
+    .spotlight-text {
+        order: 1;
+        width: 100%;
+        padding: 40px 24px 0;
+        margin-top: 60px;
+    }
+
+    /* 2. GAMBAR (ORDER 2) */
+    .spotlight-right {
+        order: 2;
+        width: 100%;
+        padding: 0 20px;
+        margin-top: 24px;
+    }
+
+    .spotlight-track {
+        gap: 12px;
+    }
+
+    /* DESKTOP MODE DI HP: Gambar muncul 2-2 (50%) */
+    .spotlight-card {
+        flex: 0 0 calc(50% - 6px); 
+        height: 300px;
+    }
+
+    /* 3. SLIDER FOOTER (ORDER 3) */
+    .spotlight-footer {
+        order: 3;
+        width: 100%;
+        padding: 20px 24px 60px;
+        margin: 0;
+        background: #f7f6f2;
+    }
+
+    .spotlight-title {
+        font-size: 38px;
+    }
+
+    .spotlight-desc {
+        max-width: 100%;
+    }
+}
+
+/* KHUSUS HP MOBILE MODE (Layar Kecil) */
+@media (max-width: 767.98px) {
+    /* MOBILE MODE: Gambar muncul 1-1 (100%) */
+    .spotlight-card {
         flex: 0 0 100%; 
-        height: 280px; 
+        height: 280px;
     }
-
-    .spotlight-footer { 
-        order: 3; /* Navigasi slider paling bawah */
-        width: 100%; 
-        padding: 30px 24px 60px; 
-        background: #f7f6f2; 
-        box-sizing: border-box;
-    }
-
-    .spotlight-title { font-size: 32px; }
 }
 
 /*** Stats ***/
