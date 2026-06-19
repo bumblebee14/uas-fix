@@ -1627,18 +1627,17 @@
     z-index: 1;
 }
 
-/* KIRI */
+/* KIRI (Teks & Navigasi) - UNTUK LAPTOP & HP DESKTOP MODE */
 .spotlight-left {
     width: 50%;
-    /* PENYESUAIAN GAMBAR 1: Padding kanan dikurangi jadi % agar teks punya ruang di layar tanggung/desktop mode HP */
-    padding: 90px 5% 70px 90px; 
+    padding: 100px 5% 70px 80px; 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between; /* Menjaga teks di atas, slider navigasi di bawah */
 }
 
 .spotlight-text {
-    margin-top: 90px;
+    margin-top: 80px;
 }
 
 .spotlight-label {
@@ -1676,8 +1675,9 @@
     transition: .3s; 
 }
 
+/* Navigasi Slider (01/04) */
 .spotlight-footer {
-    margin-top: 90px;
+    width: 100%;
 }
 
 .spotlight-bottom-row {
@@ -1741,7 +1741,7 @@
     color: white;
 }
 
-/* KANAN */
+/* KANAN (Bagian Gambar Slider) */
 .spotlight-right {
     width: 50%;
     overflow: hidden;
@@ -1753,12 +1753,8 @@
 .spotlight-track {
     display: flex;
     gap: 20px;
-    will-change: transform;
-    transform: translate3d(0,0,0);
-    backface-visibility: hidden;
 }
 
-/* CARD */
 .spotlight-card {
     flex: 0 0 500px;
     height: 470px;
@@ -1776,9 +1772,7 @@
 
 .spotlight-overlay {
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    left: 0; right: 0; bottom: 0;
     padding: 30px;
     background: linear-gradient(to top, rgba(0,0,0,.9), transparent);
 }
@@ -1789,58 +1783,53 @@
     font-weight: 700;
 }
 
-/* REVISI MOBILE (GAMBAR 3) */
-@media (max-width: 991.98px) {
+/* ============================================================
+   FIX UNTUK HP MOBILE MODE (< 768px)
+   URUTAN: TEKS -> GAMBAR -> SLIDER NAV
+   ============================================================ */
+@media (max-width: 767.98px) {
     .spotlight-section {
         flex-direction: column;
-        margin-top: 0; /* Menghindari tabrakan dengan elemen atas */
+        margin-top: 0;
     }
 
+    /* Hilangkan pembungkus kolom agar urutan (order) bisa bebas diatur */
     .spotlight-left {
-        display: contents; /* Menghilangkan pembungkus agar anak-anaknya bisa di-order */
+        display: contents; 
     }
 
     /* 1. TEKS DI ATAS */
     .spotlight-text {
         order: 1;
         width: 100%;
-        padding: 60px 24px 20px;
-        margin-top: 0;
+        padding: 40px 24px 0;
+        margin-top: 60px;
     }
 
-    .spotlight-title {
-        font-size: 36px;
-    }
-
-    .spotlight-desc {
-        max-width: 100%;
-    }
-
-    /* 2. GAMBAR (SLIDER) DI TENGAH */
+    /* 2. GAMBAR SLIDER DI TENGAH */
     .spotlight-right {
         order: 2;
         width: 100%;
-        padding: 0 0 0 24px; /* Memberi ruang di kiri agar kartu tidak mepet layar */
-        margin-top: 10px;
+        padding-left: 24px;
+        margin-top: 24px;
     }
 
     .spotlight-card {
-        flex: 0 0 300px; /* Ukuran kartu lebih kecil di mobile */
-        height: 380px;
+        flex: 0 0 280px;
+        height: 350px;
     }
 
-    /* 3. NAVIGASI SLIDER DI BAWAH */
+    /* 3. SLIDER NAVIGASI (01/04) DI BAWAH GAMBAR */
     .spotlight-footer {
         order: 3;
         width: 100%;
-        padding: 30px 24px 60px;
-        margin-top: 0;
+        padding: 20px 24px 60px;
+        margin: 0;
         background: #f7f6f2;
     }
 
-    .spotlight-bottom-row {
-        flex-direction: row; /* Tetap sejajar counter dan tombol */
-        justify-content: space-between;
+    .spotlight-title {
+        font-size: 38px;
     }
 }
 
@@ -3541,33 +3530,6 @@
 
 }
 
-/* ====================================
-   SPOTLIGHT MOBILE FIX
-==================================== */
-@media (max-width: 767.98px){
-
-    .spotlight-right{
-        padding: 0 20px;
-    }
-
-    .spotlight-track{
-        gap: 12px;
-    }
-
-    .spotlight-card{
-        flex: 0 0 100%;
-        max-width: 100%;
-        height: 280px;
-    }
-
-    .spotlight-overlay{
-        padding: 20px;
-    }
-
-    .spotlight-overlay h3{
-        font-size: 18px;
-    }
-}
 
 /* ====================================
    MOBILE GRID FIX
