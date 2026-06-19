@@ -819,11 +819,11 @@
     z-index: 1;
 }
 
-/* KIRI */
+/* LAYOUT DEFAULT (LAPTOP & HP DESKTOP MODE) - SAMPING KIRI KANAN */
 .spotlight-left {
     width: 50%;
-    /* PENYESUAIAN GAMBAR 1: Padding kanan dikurangi jadi % agar teks punya ruang di layar tanggung/desktop mode HP */
-    padding: 90px 5% 70px 90px; 
+    /* Padding disesuaikan agar teks punya ruang lega di Desktop Mode HP */
+    padding: 90px 5% 70px 80px; 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -981,18 +981,20 @@
     font-weight: 700;
 }
 
-/* REVISI MOBILE (GAMBAR 3) */
-@media (max-width: 991.98px) {
+/* 
+   KHUSUS HP MOBILE MODE (Layar < 768px) 
+   BAGIAN INI SAMA PERSIS DENGAN KODE ASLI ANDA, TIDAK DIUBAH URUTANNYA
+*/
+@media (max-width: 767.98px) {
     .spotlight-section {
         flex-direction: column;
-        margin-top: 0; /* Menghindari tabrakan dengan elemen atas */
+        margin-top: 0;
     }
 
     .spotlight-left {
-        display: contents; /* Menghilangkan pembungkus agar anak-anaknya bisa di-order */
+        display: contents; 
     }
 
-    /* 1. TEKS DI ATAS */
     .spotlight-text {
         order: 1;
         width: 100%;
@@ -1008,20 +1010,18 @@
         max-width: 100%;
     }
 
-    /* 2. GAMBAR (SLIDER) DI TENGAH */
     .spotlight-right {
         order: 2;
         width: 100%;
-        padding: 0 0 0 24px; /* Memberi ruang di kiri agar kartu tidak mepet layar */
+        padding: 0 0 0 24px;
         margin-top: 10px;
     }
 
     .spotlight-card {
-        flex: 0 0 300px; /* Ukuran kartu lebih kecil di mobile */
+        flex: 0 0 300px;
         height: 380px;
     }
 
-    /* 3. NAVIGASI SLIDER DI BAWAH */
     .spotlight-footer {
         order: 3;
         width: 100%;
@@ -1031,7 +1031,7 @@
     }
 
     .spotlight-bottom-row {
-        flex-direction: row; /* Tetap sejajar counter dan tombol */
+        flex-direction: row;
         justify-content: space-between;
     }
 }
