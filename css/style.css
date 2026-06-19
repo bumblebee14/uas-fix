@@ -819,11 +819,14 @@
     z-index: 1;
 }
 
-/* LAYOUT DEFAULT (LAPTOP & HP DESKTOP MODE) - SAMPING KIRI KANAN */
+/* 
+   LAYOUT DASAR (UNTUK LAPTOP & DESKTOP MODE DI HP) 
+   SAMPING KIRI KANAN (SIDE-BY-SIDE) 
+*/
 .spotlight-left {
     width: 50%;
-    /* Padding disesuaikan agar teks punya ruang lega di Desktop Mode HP */
-    padding: 90px 5% 70px 80px; 
+    /* Padding disesuaikan agar teks tidak menabrak gambar di Desktop Mode HP */
+    padding: 80px 5% 60px 80px; 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -933,7 +936,7 @@
     color: white;
 }
 
-/* KANAN */
+/* KANAN (BAGIAN GAMBAR) */
 .spotlight-right {
     width: 50%;
     overflow: hidden;
@@ -950,7 +953,6 @@
     backface-visibility: hidden;
 }
 
-/* CARD */
 .spotlight-card {
     flex: 0 0 500px;
     height: 470px;
@@ -982,10 +984,11 @@
 }
 
 /* 
-   KHUSUS HP MOBILE MODE (Layar < 768px) 
-   BAGIAN INI SAMA PERSIS DENGAN KODE ASLI ANDA, TIDAK DIUBAH URUTANNYA
+   KHUSUS HP MOBILE MODE (LEBAR < 900px)
+   URUTAN SESUAI GAMBAR FAVORIT ANDA (TEKS -> GAMBAR -> NAVIGASI)
+   INI TIDAK AKAN TERDETEKSI OLEH HP DALAM "DESKTOP MODE" (980px).
 */
-@media (max-width: 767.98px) {
+@media (max-width: 899.98px) {
     .spotlight-section {
         flex-direction: column;
         margin-top: 0;
