@@ -812,28 +812,30 @@
 
 .spotlight-section {
     display: flex;
-    min-height: 700px;
+    min-height: 650px;
     background: #f7f6f2;
     margin-top: -90px;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 
 /* 
-   UNTUK LAPTOP & DESKTOP MODE DI HP 
-   Layout: Samping Kiri-Kanan
+   KIRI (Teks & Navigasi) 
+   Untuk Laptop & Desktop Mode HP 
 */
 .spotlight-left {
-    width: 45%; /* Dipersempit sedikit agar gambar punya ruang */
-    /* Padding dinamis: 80px di layar lebar, mengecil otomatis di layar nanggung (HP Desktop Mode) */
-    padding: 80px 4% 60px 8%; 
+    width: 48%;
+    padding: 100px 4% 60px 8%; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Menjaga teks di atas, slider navigasi di bawah */
+    justify-content: flex-start; /* Mengembalikan ke flow normal agar tidak melayang */
+    position: relative;
 }
 
 .spotlight-text {
-    margin-top: 60px;
+    margin-top: 50px;
+    margin-bottom: 40px; /* Memberi jarak ke navigasi di bawahnya */
 }
 
 .spotlight-label {
@@ -844,14 +846,15 @@
 }
 
 .spotlight-title {
-    font-size: 45px; /* Disesuaikan agar tidak terlalu besar di HP Desktop Mode */
+    font-size: 44px; 
     font-weight: 800;
-    line-height: 1.05;
-    margin: 17px 0;
+    line-height: 1.1;
+    margin: 15px 0;
+    color: #111;
 }
 
 .spotlight-desc {
-    margin-top: 25px;
+    margin-top: 20px;
     max-width: 100%;
     line-height: 1.8;
     color: #666;
@@ -869,20 +872,26 @@
     border-bottom: 2px solid #13357B; 
     padding-bottom: 2px; 
     transition: .3s; 
+    margin-top: 15px;
 }
 
+/* Navigasi (01/04) - Paksa di bawah teks di desktop */
 .spotlight-footer {
-    margin-top: 50px;
+    margin-top: auto; /* Mendorong navigasi ke dasar kolom kiri */
+    width: 100%;
+    position: relative;
+    padding-top: 30px;
 }
 
 .spotlight-bottom-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .spotlight-counter {
-    font-size: 34px;
+    font-size: 32px;
     font-weight: 800;
     color: #13357B;
     line-height: 1;
@@ -898,14 +907,14 @@
     display: flex;
     gap: 8px;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .progress-item {
     flex: 1;
-    height: 4px;
+    height: 3px;
     background: #ddd;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .progress-item.active {
@@ -914,21 +923,22 @@
 
 .spotlight-nav {
     display: flex;
-    gap: 8px;
+    gap: 10px;
 }
 
 .spotlight-nav button {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-    border: 1px solid #13357B;
+    border: 1.5px solid #13357B;
     background: white;
     color: #13357B;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
+    font-size: 14px;
     transition: .3s;
+    cursor: pointer;
 }
 
 .spotlight-nav button:hover {
@@ -938,7 +948,7 @@
 
 /* KANAN (BAGIAN GAMBAR) */
 .spotlight-right {
-    width: 55%;
+    width: 52%;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -951,9 +961,9 @@
 }
 
 .spotlight-card {
-    flex: 0 0 500px;
-    height: 470px;
-    border-radius: 22px;
+    flex: 0 0 520px;
+    height: 480px;
+    border-radius: 20px;
     overflow: hidden;
     position: relative;
 }
@@ -962,69 +972,67 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .spotlight-overlay {
     position: absolute;
     left: 0; right: 0; bottom: 0;
     padding: 30px;
-    background: linear-gradient(to top, rgba(0,0,0,.9), transparent);
+    background: linear-gradient(to top, rgba(0,0,0,.85), transparent);
 }
 
 .spotlight-overlay h3 {
     color: white;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
 }
 
 /* 
-   KHUSUS HP MOBILE MODE (Layar < 768px)
-   URUTAN JANGAN DIUBAH: TEKS -> GAMBAR -> NAVIGASI
+   KHUSUS HP MOBILE MODE (Layar asli HP)
+   Tetap Teks -> Gambar -> Slider (Sesuai keinginan kamu)
 */
 @media (max-width: 767.98px) {
     .spotlight-section {
         flex-direction: column;
         margin-top: 0;
+        min-height: auto;
     }
 
     .spotlight-left {
-        display: contents; 
+        display: contents; /* Trik agar bisa reorder elemen */
     }
 
     .spotlight-text {
-        order: 1;
+        order: 1; /* 1. Teks paling atas */
         width: 100%;
         padding: 60px 24px 20px;
         margin-top: 0;
-    }
-
-    .spotlight-title {
-        font-size: 34px;
+        margin-bottom: 0;
     }
 
     .spotlight-right {
-        order: 2;
+        order: 2; /* 2. Gambar slider di tengah */
         width: 100%;
         padding: 0 0 0 24px;
-        margin-top: 10px;
-    }
-
-    .spotlight-card {
-        flex: 0 0 300px;
-        height: 380px;
+        margin-top: 15px;
     }
 
     .spotlight-footer {
-        order: 3;
+        order: 3; /* 3. Navigasi 01/04 paling bawah */
         width: 100%;
         padding: 30px 24px 60px;
         margin-top: 0;
         background: #f7f6f2;
     }
 
-    .spotlight-bottom-row {
-        flex-direction: row;
-        justify-content: space-between;
+    .spotlight-card {
+        flex: 0 0 310px;
+        height: 380px;
+    }
+
+    .spotlight-title {
+        font-size: 32px;
     }
 }
 
