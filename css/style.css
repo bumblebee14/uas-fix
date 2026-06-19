@@ -812,30 +812,29 @@
 
 .spotlight-section {
     display: flex;
-    min-height: 650px;
+    flex-wrap: wrap; /* Izinkan elemen membungkus di mobile */
+    min-height: 600px;
     background: #f7f6f2;
     margin-top: -90px;
     position: relative;
     z-index: 1;
-    overflow: hidden;
 }
 
 /* 
-   KIRI (Teks & Navigasi) 
-   Untuk Laptop & Desktop Mode HP 
+   KOLOM KIRI (Teks & Navigasi)
+   Diterapkan pada Laptop & Desktop Mode HP 
 */
 .spotlight-left {
-    width: 48%;
-    padding: 100px 4% 60px 8%; 
+    width: 40%; /* Kunci lebar kolom kiri agar navigasi tidak melebar */
+    padding: 100px 40px 60px 80px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Mengembalikan ke flow normal agar tidak melayang */
-    position: relative;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
 
 .spotlight-text {
-    margin-top: 50px;
-    margin-bottom: 40px; /* Memberi jarak ke navigasi di bawahnya */
+    margin-top: 40px;
 }
 
 .spotlight-label {
@@ -846,16 +845,14 @@
 }
 
 .spotlight-title {
-    font-size: 44px; 
+    font-size: 42px; 
     font-weight: 800;
     line-height: 1.1;
     margin: 15px 0;
-    color: #111;
 }
 
 .spotlight-desc {
     margin-top: 20px;
-    max-width: 100%;
     line-height: 1.8;
     color: #666;
 }
@@ -868,51 +865,27 @@
     font-weight: 700; 
     color: #13357B; 
     text-decoration: none; 
-    letter-spacing: .5px; 
     border-bottom: 2px solid #13357B; 
     padding-bottom: 2px; 
-    transition: .3s; 
     margin-top: 15px;
 }
 
-/* Navigasi (01/04) - Paksa di bawah teks di desktop */
+/* CONTAINER NAVIGASI (01/04) */
 .spotlight-footer {
-    margin-top: auto; /* Mendorong navigasi ke dasar kolom kiri */
-    width: 100%;
-    position: relative;
-    padding-top: 30px;
-}
-
-.spotlight-bottom-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.spotlight-counter {
-    font-size: 32px;
-    font-weight: 800;
-    color: #13357B;
-    line-height: 1;
-}
-
-.spotlight-counter span {
-    font-size: 16px;
-    font-weight: 500;
-    color: #999;
+    width: 100%; /* Navigasi dipaksa selebar kolom teks saja */
+    margin-top: 40px;
 }
 
 .spotlight-progress {
     display: flex;
     gap: 8px;
     width: 100%;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
 .progress-item {
     flex: 1;
-    height: 3px;
+    height: 4px;
     background: #ddd;
     border-radius: 10px;
 }
@@ -921,14 +894,31 @@
     background: #13357B;
 }
 
+.spotlight-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.spotlight-counter {
+    font-size: 32px;
+    font-weight: 800;
+    color: #13357B;
+}
+
+.spotlight-counter span {
+    font-size: 16px;
+    color: #999;
+}
+
 .spotlight-nav {
     display: flex;
     gap: 10px;
 }
 
 .spotlight-nav button {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: 1.5px solid #13357B;
     background: white;
@@ -936,9 +926,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
-    transition: .3s;
     cursor: pointer;
+    transition: .3s;
 }
 
 .spotlight-nav button:hover {
@@ -946,13 +935,15 @@
     color: white;
 }
 
-/* KANAN (BAGIAN GAMBAR) */
+/* 
+   KOLOM KANAN (GAMBAR SLIDER) 
+*/
 .spotlight-right {
-    width: 52%;
+    width: 60%;
     overflow: hidden;
     display: flex;
     align-items: center;
-    position: relative;
+    padding-right: 20px;
 }
 
 .spotlight-track {
@@ -961,8 +952,8 @@
 }
 
 .spotlight-card {
-    flex: 0 0 520px;
-    height: 480px;
+    flex: 0 0 500px;
+    height: 450px;
     border-radius: 20px;
     overflow: hidden;
     position: relative;
@@ -972,67 +963,56 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
 .spotlight-overlay {
     position: absolute;
     left: 0; right: 0; bottom: 0;
-    padding: 30px;
-    background: linear-gradient(to top, rgba(0,0,0,.85), transparent);
+    padding: 25px;
+    background: linear-gradient(to top, rgba(0,0,0,.8), transparent);
 }
 
 .spotlight-overlay h3 {
     color: white;
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 20px;
 }
 
 /* 
-   KHUSUS HP MOBILE MODE (Layar asli HP)
-   Tetap Teks -> Gambar -> Slider (Sesuai keinginan kamu)
+   URUTAN KHUSUS HP MOBILE MODE (Layar < 768px)
+   Teks (1) -> Gambar (2) -> Slider Nav (3)
 */
 @media (max-width: 767.98px) {
     .spotlight-section {
         flex-direction: column;
         margin-top: 0;
-        min-height: auto;
     }
 
     .spotlight-left {
-        display: contents; /* Trik agar bisa reorder elemen */
+        display: contents; /* Izinkan reorder */
     }
 
     .spotlight-text {
-        order: 1; /* 1. Teks paling atas */
+        order: 1; /* 1. Teks di atas */
         width: 100%;
-        padding: 60px 24px 20px;
-        margin-top: 0;
-        margin-bottom: 0;
+        padding: 60px 24px 0;
     }
 
     .spotlight-right {
-        order: 2; /* 2. Gambar slider di tengah */
+        order: 2; /* 2. Gambar di tengah */
         width: 100%;
-        padding: 0 0 0 24px;
-        margin-top: 15px;
-    }
-
-    .spotlight-footer {
-        order: 3; /* 3. Navigasi 01/04 paling bawah */
-        width: 100%;
-        padding: 30px 24px 60px;
-        margin-top: 0;
-        background: #f7f6f2;
+        padding: 20px 0 0 24px;
     }
 
     .spotlight-card {
-        flex: 0 0 310px;
+        flex: 0 0 300px;
         height: 380px;
     }
 
-    .spotlight-title {
-        font-size: 32px;
+    .spotlight-footer {
+        order: 3; /* 3. Navigasi paling bawah */
+        width: 100%;
+        padding: 20px 24px 60px;
+        background: #f7f6f2;
     }
 }
 
