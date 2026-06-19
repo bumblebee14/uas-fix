@@ -819,11 +819,11 @@
     z-index: 1;
 }
 
-/* KIRI (Teks & Navigasi) */
+/* TAMPILAN LAPTOP & HP DESKTOP MODE (Samping-sampingan) */
 .spotlight-left {
     width: 50%;
-    /* Menggunakan padding lebih fleksibel agar teks tidak terpotong di layar tanggung */
-    padding: 90px 4% 70px 90px; 
+    /* Gunakan padding % agar teks punya ruang lega di Desktop Mode HP */
+    padding: 80px 5% 60px 8%; 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -841,7 +841,7 @@
 }
 
 .spotlight-title {
-    font-size: 46px; /* Sedikit dikecilkan agar aman di Desktop Mode HP */
+    font-size: 50px;
     font-weight: 800;
     line-height: 1.05;
     margin: 17px 0;
@@ -933,7 +933,7 @@
     color: white;
 }
 
-/* KANAN (Slider Gambar) */
+/* KANAN (BAGIAN GAMBAR) */
 .spotlight-right {
     width: 50%;
     overflow: hidden;
@@ -982,50 +982,59 @@
 
 /* 
    REVISI MOBILE MODE:
-   Gunakan breakpoint 900px. 
-   Desktop Mode di HP (980px) tidak akan masuk sini, jadi tetap Side-by-Side (Sampingan).
-   HP Mobile biasa (<900px) akan tetap menumpuk Teks -> Gambar -> Slider Nav.
+   Batas diturunkan ke 767px agar DESKTOP MODE HP (980px) 
+   TIDAK masuk ke sini dan tetap Kiri-Kanan.
+   LOGIKA MOBILE KAMU DI BAWAH INI TETAP SAMA (Teks -> Gambar -> Nav).
 */
-@media (max-width: 900px) {
+@media (max-width: 767.98px) {
     .spotlight-section {
         flex-direction: column;
         margin-top: 0;
     }
 
-    /* REORDERING untuk Mobile: Teks (1) -> Gambar (2) -> Footer Nav (3) */
     .spotlight-left {
         display: contents; 
+        padding: 0; /* Reset padding desktop */
     }
 
     .spotlight-text {
         order: 1;
         width: 100%;
-        padding: 40px 24px 0;
-        margin-top: 80px;
+        padding: 60px 24px 20px;
+        margin-top: 0;
+    }
+
+    .spotlight-title {
+        font-size: 36px;
+    }
+
+    .spotlight-desc {
+        max-width: 100%;
     }
 
     .spotlight-right {
         order: 2;
         width: 100%;
-        padding-left: 24px;
-        margin-top: 24px;
+        padding: 0 0 0 24px;
+        margin-top: 10px;
+    }
+
+    .spotlight-card {
+        flex: 0 0 300px;
+        height: 380px;
     }
 
     .spotlight-footer {
         order: 3;
         width: 100%;
-        padding: 20px 24px 40px;
-        margin: 0;
+        padding: 30px 24px 60px;
+        margin-top: 0;
         background: #f7f6f2;
     }
 
-    .spotlight-card {
-        flex: 0 0 280px;
-        height: 350px;
-    }
-
-    .spotlight-title {
-        font-size: 38px;
+    .spotlight-bottom-row {
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
