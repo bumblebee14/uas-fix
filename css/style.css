@@ -819,10 +819,11 @@
     z-index: 1;
 }
 
-/* BAGIAN KIRI (Teks & Navigasi) */
+/* KIRI (Teks & Navigasi) */
 .spotlight-left {
     width: 50%;
-    padding: 90px 6% 70px 90px; /* Padding kanan menggunakan % agar fleksibel di layar desktop tanggung */
+    /* Menggunakan padding fleksibel agar tidak memakan ruang gambar di Desktop Mode HP */
+    padding: 90px 4% 70px 60px; 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -840,7 +841,7 @@
 }
 
 .spotlight-title {
-    font-size: 50px;
+    font-size: 45px; /* Sedikit dikecilkan agar aman di layar tanggung */
     font-weight: 800;
     line-height: 1.05;
     margin: 17px 0;
@@ -868,8 +869,7 @@
 }
 
 .spotlight-footer {
-    margin-top: auto; /* Memastikan slider berada di bawah area teks pada mode desktop */
-    padding-top: 40px;
+    margin-top: 90px;
 }
 
 .spotlight-bottom-row {
@@ -933,7 +933,7 @@
     color: white;
 }
 
-/* BAGIAN KANAN (Gambar/Slider) */
+/* KANAN (Gambar) */
 .spotlight-right {
     width: 50%;
     overflow: hidden;
@@ -981,55 +981,49 @@
 }
 
 /* ============================================================
-   MOBILE MODE FIX (Triggers only for screens smaller than 768px)
-   Ini agar mode HP biasa tetap rapi dengan urutan: Teks -> Gambar -> Slider
-   Sedangkan "Desktop Mode" di HP (980px+) akan pakai kode di atas.
+   MOBILE MODE FIX (Hanya aktif di lebar layar HP asli)
    ============================================================ */
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
     .spotlight-section {
         flex-direction: column;
         margin-top: 0;
-        min-height: auto;
     }
 
-    /* Menggunakan display: contents agar urutan (order) bisa diatur bebas */
+    /* Trik agar Teks, Gambar, dan Slider bisa ditumpuk sesuai urutan */
     .spotlight-left {
         display: contents; 
     }
 
     .spotlight-text {
-        order: 1; /* Urutan 1: Teks */
+        order: 1; /* 1. Teks paling atas */
         width: 100%;
-        padding: 60px 24px 0;
-        margin-top: 0;
+        padding: 40px 24px 0;
+        margin-top: 60px;
     }
 
     .spotlight-right {
-        order: 2; /* Urutan 2: Gambar Slider */
+        order: 2; /* 2. Gambar di tengah */
         width: 100%;
-        padding: 0 0 0 24px;
-        margin-top: 25px;
+        padding-left: 24px;
+        margin-top: 24px;
     }
 
     .spotlight-footer {
-        order: 3; /* Urutan 3: Slider Navigasi (01/04) */
+        order: 3; /* 3. Slider Navigasi (01/04) di bawah gambar */
         width: 100%;
-        padding: 30px 24px 60px;
-        background: #f7f6f2;
+        padding: 20px 24px 40px;
         margin: 0;
+        background: #f7f6f2;
     }
 
     .spotlight-card {
-        flex: 0 0 300px; /* Ukuran gambar lebih pas untuk HP */
-        height: 380px;
+        flex: 0 0 100%; /* Kartu memenuhi lebar di mobile */
+        max-width: 280px; /* Tapi jangan terlalu lebar */
+        height: 350px;
     }
 
     .spotlight-title {
-        font-size: 34px;
-    }
-
-    .spotlight-desc {
-        max-width: 100%;
+        font-size: 38px;
     }
 }
 
