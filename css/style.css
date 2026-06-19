@@ -819,11 +819,11 @@
     z-index: 1;
 }
 
-/* TAMPILAN LAPTOP & HP DESKTOP MODE (Samping-sampingan) */
+/* KIRI */
 .spotlight-left {
     width: 50%;
-    /* Gunakan padding % agar teks punya ruang lega di Desktop Mode HP */
-    padding: 80px 5% 60px 8%; 
+    /* PENYESUAIAN GAMBAR 1: Padding kanan dikurangi jadi % agar teks punya ruang di layar tanggung/desktop mode HP */
+    padding: 90px 5% 70px 90px; 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -933,7 +933,7 @@
     color: white;
 }
 
-/* KANAN (BAGIAN GAMBAR) */
+/* KANAN */
 .spotlight-right {
     width: 50%;
     overflow: hidden;
@@ -950,6 +950,7 @@
     backface-visibility: hidden;
 }
 
+/* CARD */
 .spotlight-card {
     flex: 0 0 500px;
     height: 470px;
@@ -980,23 +981,18 @@
     font-weight: 700;
 }
 
-/* 
-   REVISI MOBILE MODE:
-   Batas diturunkan ke 767px agar DESKTOP MODE HP (980px) 
-   TIDAK masuk ke sini dan tetap Kiri-Kanan.
-   LOGIKA MOBILE KAMU DI BAWAH INI TETAP SAMA (Teks -> Gambar -> Nav).
-*/
-@media (max-width: 767.98px) {
+/* REVISI MOBILE (GAMBAR 3) */
+@media (max-width: 991.98px) {
     .spotlight-section {
         flex-direction: column;
-        margin-top: 0;
+        margin-top: 0; /* Menghindari tabrakan dengan elemen atas */
     }
 
     .spotlight-left {
-        display: contents; 
-        padding: 0; /* Reset padding desktop */
+        display: contents; /* Menghilangkan pembungkus agar anak-anaknya bisa di-order */
     }
 
+    /* 1. TEKS DI ATAS */
     .spotlight-text {
         order: 1;
         width: 100%;
@@ -1012,18 +1008,20 @@
         max-width: 100%;
     }
 
+    /* 2. GAMBAR (SLIDER) DI TENGAH */
     .spotlight-right {
         order: 2;
         width: 100%;
-        padding: 0 0 0 24px;
+        padding: 0 0 0 24px; /* Memberi ruang di kiri agar kartu tidak mepet layar */
         margin-top: 10px;
     }
 
     .spotlight-card {
-        flex: 0 0 300px;
+        flex: 0 0 300px; /* Ukuran kartu lebih kecil di mobile */
         height: 380px;
     }
 
+    /* 3. NAVIGASI SLIDER DI BAWAH */
     .spotlight-footer {
         order: 3;
         width: 100%;
@@ -1033,7 +1031,7 @@
     }
 
     .spotlight-bottom-row {
-        flex-direction: row;
+        flex-direction: row; /* Tetap sejajar counter dan tombol */
         justify-content: space-between;
     }
 }
