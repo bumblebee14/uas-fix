@@ -820,20 +820,20 @@
 }
 
 /* 
-   LAYOUT DASAR (UNTUK LAPTOP & DESKTOP MODE DI HP) 
-   SAMPING KIRI KANAN (SIDE-BY-SIDE) 
+   UNTUK LAPTOP & DESKTOP MODE DI HP 
+   Layout: Samping Kiri-Kanan
 */
 .spotlight-left {
-    width: 50%;
-    /* Padding disesuaikan agar teks tidak menabrak gambar di Desktop Mode HP */
-    padding: 80px 5% 60px 80px; 
+    width: 45%; /* Dipersempit sedikit agar gambar punya ruang */
+    /* Padding dinamis: 80px di layar lebar, mengecil otomatis di layar nanggung (HP Desktop Mode) */
+    padding: 80px 4% 60px 8%; 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between; /* Menjaga teks di atas, slider navigasi di bawah */
 }
 
 .spotlight-text {
-    margin-top: 90px;
+    margin-top: 60px;
 }
 
 .spotlight-label {
@@ -844,7 +844,7 @@
 }
 
 .spotlight-title {
-    font-size: 50px;
+    font-size: 45px; /* Disesuaikan agar tidak terlalu besar di HP Desktop Mode */
     font-weight: 800;
     line-height: 1.05;
     margin: 17px 0;
@@ -852,8 +852,8 @@
 
 .spotlight-desc {
     margin-top: 25px;
-    max-width: 430px;
-    line-height: 1.9;
+    max-width: 100%;
+    line-height: 1.8;
     color: #666;
 }
 
@@ -872,7 +872,7 @@
 }
 
 .spotlight-footer {
-    margin-top: 90px;
+    margin-top: 50px;
 }
 
 .spotlight-bottom-row {
@@ -938,7 +938,7 @@
 
 /* KANAN (BAGIAN GAMBAR) */
 .spotlight-right {
-    width: 50%;
+    width: 55%;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -948,9 +948,6 @@
 .spotlight-track {
     display: flex;
     gap: 20px;
-    will-change: transform;
-    transform: translate3d(0,0,0);
-    backface-visibility: hidden;
 }
 
 .spotlight-card {
@@ -964,15 +961,12 @@
 .spotlight-card img {
     width: 100%;
     height: 100%;
-    object-position: center;
     object-fit: cover;
 }
 
 .spotlight-overlay {
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    left: 0; right: 0; bottom: 0;
     padding: 30px;
     background: linear-gradient(to top, rgba(0,0,0,.9), transparent);
 }
@@ -984,11 +978,10 @@
 }
 
 /* 
-   KHUSUS HP MOBILE MODE (LEBAR < 900px)
-   URUTAN SESUAI GAMBAR FAVORIT ANDA (TEKS -> GAMBAR -> NAVIGASI)
-   INI TIDAK AKAN TERDETEKSI OLEH HP DALAM "DESKTOP MODE" (980px).
+   KHUSUS HP MOBILE MODE (Layar < 768px)
+   URUTAN JANGAN DIUBAH: TEKS -> GAMBAR -> NAVIGASI
 */
-@media (max-width: 899.98px) {
+@media (max-width: 767.98px) {
     .spotlight-section {
         flex-direction: column;
         margin-top: 0;
@@ -1006,11 +999,7 @@
     }
 
     .spotlight-title {
-        font-size: 36px;
-    }
-
-    .spotlight-desc {
-        max-width: 100%;
+        font-size: 34px;
     }
 
     .spotlight-right {
